@@ -72,13 +72,11 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Smart Robot Car V4.0 | Main Build | $79.99 | <a href="https://www.amazon.com/ELEGOO-Tracking-Ultrasonic-Intelligent-Educational/dp/B07KPZ8RSZ"> Link </a> |
 
 # Other Resources/Examples
 - [SparkFun Library](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Line Following Example Code]([https://sviatil0.github.io/Sviatoslav_BSE/](https://circuitdigest.com/microcontroller-projects/arduino-uno-line-follower-robot))
+- [Line Following Example Code](https://circuitdigest.com/microcontroller-projects/arduino-uno-line-follower-robot)
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
