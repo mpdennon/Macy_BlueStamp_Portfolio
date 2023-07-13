@@ -29,17 +29,14 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 
 
-<!--- # Second Milestone --->
+# Second Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+The second milestone, for me, consisted of learning how to write my own code. I used the code from the blink test and an "if" statement to make the LED blink when on a dark surface with the line track bottom sensor. All concepts I used were utterly foreign to me before this milestone. Then I combined the ideas from the motor test run, a sample from a follow-line test, and the sensor run to try and make the robot move on the line. I had trouble getting the bot to follow along sharp curves once I got it to follow the initial semi-straight line. For a while, it only went one way, but then I found out that by using multiple if statements with the combination of the left and right sensors, it could turn back once off the line. I had to ensure that once off the line, the car would turn instead of head straight forward, as was the initial issue. I then created a looped track, and the bot successfully followed the black line in both directions. 
+
 
 # First Milestone
 
@@ -66,9 +63,7 @@ void loop() {
 }
 ```
 
-# Bill of Materials
-
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+# Bill of Materials 
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
