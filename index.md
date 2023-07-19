@@ -62,6 +62,7 @@ void loop() {
 | Smart Robot Car V4.0 | Main Build | $79.99 | <a href="https://www.amazon.com/ELEGOO-Tracking-Ultrasonic-Intelligent-Educational/dp/B07KPZ8RSZ"> Link </a> |
 
 # Other Resources/Examples
-- [whatever code I end up using](https://trashytuber.github.io/YimingJiaBlueStamp/)
+- [Sparkfun Library](https://github.com/sparkfun/SparkFun_TB6612FNG_Arduino_Library)
+- [Simple Ultrasonic](https://github.com/gamegine/HCSR04-ultrasonic-sensor-lib)
 - [Line Following Example Code](https://circuitdigest.com/microcontroller-projects/arduino-uno-line-follower-robot)
-- [Sun Founder][https://docs.sunfounder.com/projects/sensorkit-v2-arduino/en/latest/lesson_35.html]
+- [Sun Founder](https://docs.sunfounder.com/projects/sensorkit-v2-arduino/en/latest/lesson_35.html)
