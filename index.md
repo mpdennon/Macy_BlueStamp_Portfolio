@@ -37,7 +37,7 @@ The second milestone, for me, consisted of learning how to write my own code. I 
 My first milestone was assembling my build and running test code to ensure the motors ran. I ran into a few issues with the TB6612 motor driver. After a few tries, I could upload the code after switching from cam mode to upload mode on my Arduino uno board. The bot moves forward, backward, then side to side after running the motor test run in the SparkFun TB6612FNG Motor Drive Library. 
 
 # Schematics
-![schematic](
+![schematic](c5ac3a48c4a824be39e2d683777e2702cf66a7aa_2_690x395.png)
 
 # Code
 
