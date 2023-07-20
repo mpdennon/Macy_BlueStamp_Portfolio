@@ -36,7 +36,7 @@ The second milestone, for me, consisted of learning how to write my own code. I 
 
 My first milestone was assembling my build and running test code to ensure the motors ran. I ran into a few issues with the TB6612 motor driver. After a few tries, I could upload the code after switching from cam mode to upload mode on my Arduino uno board. The bot moves forward, backward, then side to side after running the motor test run in the SparkFun TB6612FNG Motor Drive Library. 
 
-<!--- # Schematics --->
+# Schematics
 <!--- Here's where you'll put images of your schematics. [Tinkercad] (https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. --->
 
 # Code
@@ -71,7 +71,6 @@ SimpleUltrasonic sensor(trigPin, echoPin);
 
 int scanAngle = 0;              // Initial servo scanning angle
 int pos = 0;
-int distance [180];
 
 const int minServoAngle = 0;    // Minimum angle of the servo
 const int maxServoAngle = 180;  // Maximum angle of the servo
@@ -107,42 +106,50 @@ void loop() {
   if((analogRead(M_S) < 600)&&(analogRead(R_S) < 600)&&(analogRead(L_S) < 600)){    //just in case it gets off track
       brake(motor1, motor2);
       for (int angle = 0; angle <= 180; angle += 10) {  // Scan every 10 degrees withing 180 degrees
-      servo.write(angle);
-      delay(500); 
+        servo.write(angle);
+        delay(500); 
+
+        distance = sensor.measureDistanceInCM();
      
-      Serial.print("Angle: ");
-      Serial.print(angle);
-      Serial.print(" degrees, Distance: ");
-      Serial.print(distance);
-      Serial.println(" cm");
+        Serial.print("Angle: ");
+        Serial.print(angle);
+        Serial.print(" degrees, Distance: ");
+        Serial.print(distance);
+        Serial.println(" cm");
                                                            // Check if this distance is shorter than the previous shortest distance
      if (distance != -1 && distance < shortestDistance) {   // check if -1, becuase that is an invalid reading, will not include as shortest
       shortestDistance = distance;                         // then it becomes shortest distance 
       shortestAngle = angle;                               // and shortest angle
     }    
+    if (analogRead(M_S) >= 600 || analogRead(R_S) >= 600 || analogRead(L_S) >= 600) {
+        break;
     }
-    servo.write(shortestAngle);          // Turn the servo head towards the shortest distance, defined above
-    Serial.print("Shortest distance: "); // Print the shortest distance
-    Serial.print(shortestDistance);
-    Serial.println(" cm");
+    }
+     servo.write(shortestAngle);          // Turn the servo head towards the shortest distance, defined above
+     Serial.print("Shortest distance: "); // Print the shortest distance
+     Serial.print(shortestDistance);
+     Serial.println(" cm");
     
-    int mappedLeftTurnTime = map(abs(shortestAngle - 90), 0, 90, 1460, 0);
-    int mappedRightTurnTime = map(abs(90 - shortestAngle ), 0, 90, 0, 1460);
+     int mappedLeftTurnTime = map(abs(shortestAngle - 90), 0, 90, 1460, 0);
+     int mappedRightTurnTime = map(abs(90 - shortestAngle ), 0, 90, 0, 1460);
     
-    if (shortestAngle < 90){              // if the shortest angle is < 90 then it will turn towards the right 
-     right(motor1, motor2, 100);
-     delay(mappedRightTurnTime);
-    } else {
-     left(motor1, motor2, 100);
-     delay(mappedLeftTurnTime);
-     }                                      // Wait for 4 seconds at the shortest distance
+     if (shortestAngle < 90){              // if the shortest angle is < 90 then it will turn towards the right 
+       right(motor1, motor2, 100);
+       delay(mappedRightTurnTime);
+       } else if (shortestAngle > 90) {
+         left(motor1, motor2, 100);
+         delay(mappedLeftTurnTime);
+       } else {
+         forward(motor1, motor2, 100);       // If the shortest angle is exactly 90 degrees, go straight
+         delay(500);
+      }                                   
      forward(motor1, motor2, 100);
      delay(500);
      brake();                                 // Stop both motors
-     delay(2000);                           // if the shortest angle is > 90 then it will turn towards the left  
+     delay(2000);                           
   }
   } 
-  void brake() {
+void brake() {
   motor1.brake();
   motor2.brake();
   }  
