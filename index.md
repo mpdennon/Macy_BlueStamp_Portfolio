@@ -5,7 +5,7 @@ Line tracking and distance detection come as first nature to people, but technol
 |:--:|:--:|:--:|:--:|
 | Macy D. | Los Gatos High School | Mechanical Engineering | Incoming Senior
 
-![Me and my car](IMG_7548 Small.jpeg)
+![Me and my car](IMG_7548.jpeg)
 
 # Final Thoughts and Demo
 
