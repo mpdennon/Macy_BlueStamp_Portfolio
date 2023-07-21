@@ -1,5 +1,5 @@
-# Line Tracking and Distance Detection Car
-Line tracking and distance detection come as first nature to people, but technology does it better, as with most things. I built a line-tracking and distance-detecting robot. The goal: have a robot that moves along a line and then follows an object to hop back on a different set of tracks. I am happy to report I did just that.
+# Autonomous Line Tracking and Ultrasonic Distance Detection Robot
+Line tracking and distance detection come as first nature to people. I built a line-tracking and distance-detecting robot. The goal: have a robot that moves along a line and then follows an object to hop back on a different set of tracks. I am happy to report: I did just that.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -7,7 +7,7 @@ Line tracking and distance detection come as first nature to people, but technol
 
 ![Me and my car](IMG_7548.jpeg)
 
-# Final Thoughts and Demo
+# Final Thoughts and Demo 
 
 My bot operates with four motors in the bottom half of the build connected to an Arduino Uno board with the TB6612FNG, which is the motor driver. Also connected to this board are the sensors on the bottom of the build that detect light on either side of the bot and influence the direction, and the HC-SRO4 ultrasonic sensor, which uses sound to give me a distance output, using a process similar to echolocation. I used all three of these to get my bot to do what you saw before by writing my own code in Arduino for the first time using functions like `maps()`, `if()` statements, and arrays. I did have issues with the motor control, as it tended to want to keep going until it hit a wall. 
 I was a complete beginner at coding when I started this program. I had to write my own code for the first time. Even the most basic of commands was a challenge until I fully grasped how to use different functions to get my bot to do incredible things. I entered this program with my heart set on Mechanical Engineering, where only basic coding skills are needed. That is why I picked the RC car. Little did I know the amount of coding that was ahead. After working in Arduino for three weeks, I can honestly say that coding is not as daunting as it once was, and I might have to rethink my aspirations. Honesty, it is safe to say I actually enjoy the practice. A conclusion I never thought I would reach.
@@ -33,10 +33,11 @@ The second milestone, for me, consisted of learning how to write my own code. I 
 
 My first milestone was assembling my build and running test code to ensure the motors ran. I ran into a few issues with the TB6612 motor driver. After a few tries, I could upload the code after switching from cam mode to upload mode on my Arduino uno board. The bot moves forward, backward, then side to side after running the motor test run in the SparkFun TB6612FNG Motor Drive Library. 
 
-# Schematics
+# Schematics 
 ![schematic](c5ac3a48c4a824be39e2d683777e2702cf66a7aa_2_690x395.png)
+courtesy msloane
 
-# Code
+# Code by author
 
 ```c++
 #include <SimpleUltrasonic.h>
