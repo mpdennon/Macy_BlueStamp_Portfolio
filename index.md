@@ -16,9 +16,7 @@ I was a complete beginner at coding when I started this program. I had to write 
 
 # Final Milestone 
 
-<!-- **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f1im_Xbz588" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For this milestone, I tackled a lot. I first tested the ultrasonic sensor by running a distance test then from there, I figured out how to work the servo motor to swivel the sensor. Using an array, the sensor told me distance readings every ten degrees in cm. I then ensured it could analyze the shortest output, then turned the servo motor to it. From there, I added the motors in to have the whole car turn to the shortest angle. This posed a unique challenge because initially, the car was turning in the right direction but not stopping at the correct angle. This is when I learned about maps and how to use them to do just that. A map is like a translator that helps you convert one range of values into another field. I found I had to use two maps to get the bot to turn in the right direction with the right angle; from there, I had to add the forward function, and my robot would go in the direction of the shortest distance. From there, I combined the line tracking and the sensor movement to create a bot that can hop back on a line after it gets off. I changed the distance readings to every 5 degrees to make it more accurate, as it would sometimes just miss the line. I accomplished my final goal of the build, line tracking, and distance detection combined. 
 
