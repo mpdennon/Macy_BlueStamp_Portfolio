@@ -5,8 +5,6 @@ Line tracking and distance detection come as first nature to people, but technol
 |:--:|:--:|:--:|:--:|
 | Macy D. | Los Gatos High School | Mechanical Engineering | Incoming Senior
 
-(https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
 ![Me and my car](IMG_7548.HEIC)
 
 # Final Thoughts and Demo
